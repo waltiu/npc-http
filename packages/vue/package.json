@@ -1,0 +1,30 @@
+{
+  "name": "use-request-v",
+  "private": false,
+  "version": "0.0.16",
+  "main": "dist/vHook.umd.cjs",
+  "module": "dist/vHook.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "pub": "pnpm publish"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  },
+  "dependencies": {
+    "npc-http": "workspace:^"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
