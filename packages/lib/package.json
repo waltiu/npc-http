@@ -11,8 +11,8 @@
   "type": "module",
   "scripts": {
     "test": "node dist/index.cjs",
-    "build": "tsup index.ts --dts  --format esm,cjs --minify",
-    "watch": "tsup index.ts --dts  --format esm,cjs --watch"
+    "build": "tsup index.ts --dts  --format esm,cjs --minify --clean",
+    "watch": "tsup index.ts --dts  --format esm,cjs --watch --clean"
   },
   "keywords": [],
   "author": "",
