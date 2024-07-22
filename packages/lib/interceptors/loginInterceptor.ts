@@ -17,7 +17,7 @@ export const onFulfilled = async (response: any) => {
 
         } catch (error) {
             const { code = ERROR_CODE, path = ERROR_PATH } = response.config.redirect
-            if ((error as any)?.code === ERROR_CODE && path && code) {
+            if ((error as any)?.code === code && path && code) {
                 window.location.href = path
             }
         }
