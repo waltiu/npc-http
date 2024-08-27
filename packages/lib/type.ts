@@ -54,7 +54,9 @@ export type JsonpMethodType = (url: string, options?: any) => Promise<any>
 export enum EnumAxiosType {
     get = 'get',
     post = 'post',
-    postForm = 'postForm'
+    postForm = 'postForm',
+    delete = 'delete',
+    put = 'put'
 }
 
 export enum EnumRequestType {

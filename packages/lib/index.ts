@@ -78,6 +78,26 @@ class request {
         })
 
     }
+    httpPut: RequestMethodType = (url, params, config) => {
+        return new Promise((resolve, reject) => {
+            return this.sendRequest(
+                EnumAxiosType.put,
+                url,
+                params,
+                config
+            ).then(resolve).catch(reject)
+        })
+    }
+    httpDelete: RequestMethodType = (url, params, config) => {
+        return new Promise((resolve, reject) => {
+            return this.sendRequest(
+                EnumAxiosType.delete,
+                url,
+                params,
+                config
+            ).then(resolve).catch(reject)
+        })
+    }
     postForm: RequestMethodType = (url, params, config) => {
         return new Promise((resolve, reject) => {
             return this.sendRequest(
@@ -116,9 +136,6 @@ class request {
         });
 
     }
-
-    // fetch = () => {
-    // }
 }
 
 const instance = new request()
@@ -127,9 +144,10 @@ export const httpConfigSet = instance.set
 export const httpConfigGet = instance.get
 export const httpPost = instance.httpPost
 export const httpGet = instance.httpGet
+export const httpDelete = instance.httpDelete
+export const httpPut = instance.httpPut
 export const postForm = instance.postForm
 export const jsonp = instance.jsonp
-// export const fetch = instance.fetch
 export const deleteCache = instance.deleteCache
 
 export default instance
